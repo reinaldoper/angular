@@ -1,7 +1,12 @@
-<div class="check">
+<div class={{checkMudate}}>
   <h1>check-samh1le works!</h1>
-  <button (click)="add()">ADD</button>
-  {{quantity}}
-  <button (click)="desc()">DESC</button>
-  <button (click)="reset()">RESET</button>
+  <button (click)="add()">{{num}}</button>
+  {{quantity.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}
+  <button (click)="desc()">{{num1}}</button>
+  <button (click)="reset()">{{res}}</button>
+  <input type="text" placeholder="mudar button" (input)="mudate($event.target)"/>
+  <input type="text" placeholder="1 ou 2" (input)="checkClass($event.target)"/>
+
+  <br/>
+  <p>{{mudar}}</p>
 </div>
